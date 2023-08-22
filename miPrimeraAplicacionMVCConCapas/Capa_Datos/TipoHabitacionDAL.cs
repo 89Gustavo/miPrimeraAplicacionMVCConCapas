@@ -27,6 +27,13 @@ namespace Capa_Datos
 
             });
 
+            listaQuemada.Add(new TipoHabitacionCLS
+            {
+                id = 3,
+                nombre = "Triple",
+                descripcion = "dos adulto y un ninio"
+
+            });
             return listaQuemada;
         }
     }

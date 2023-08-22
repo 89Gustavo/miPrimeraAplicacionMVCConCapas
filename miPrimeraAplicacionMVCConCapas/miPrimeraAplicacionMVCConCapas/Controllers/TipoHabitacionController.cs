@@ -16,6 +16,7 @@ namespace miPrimeraAplicacionMVCConCapas.Controllers
         {
             return View();
         }
+        //[{"id":1,"nombre":"Simple","descripcion":"Solo para uno"},{"id":2,"nombre":"Doble","descripcion":"Solo para casados"}]
         public JsonResult ListaQueda() {
             TipoHabitacionBL obj = new TipoHabitacionBL();
 
