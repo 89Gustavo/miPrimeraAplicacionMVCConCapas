@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi Primera Aplicacion MVC Con Capas</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+
+    <link href="~/Content/datatable/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="~/Content/datatable/responsive.dataTables.min.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -105,36 +109,36 @@
 
 
 
-    <!----div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
-            </div>
-        </div>
-    </div-->
-
 
     <div class="container-fluid">
-        <div class="card mt-3 rounded">
+        <div class="card mt-3 rounded-3">
             <div class="card-body ">
                 @RenderBody()
+                @*<table id='tblTipoHabitacions' class='display nowrap' style='width:100%'><thead><tr><th>ID</th><th>NOMBRE</th><th>DESCRIPCION</th></tr></thead><tbody><tr><td>id</td><td>nombre</td><td>descripcion</td></tr></tbody></table>*@
             </div>
         </div>
+
     </div>
+
+
+
+
+
 
 
     <script src="~/Scripts/jquery-3.7.0.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
     <script src="~/Content/sweetalert2/sweetalert2.all.min.js"></script>
+
+
+    <script src="~/Scripts/datable/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/datable/dataTables.responsive.min.js"></script>
+
+
+
+
+
+
 </body>
 </html>

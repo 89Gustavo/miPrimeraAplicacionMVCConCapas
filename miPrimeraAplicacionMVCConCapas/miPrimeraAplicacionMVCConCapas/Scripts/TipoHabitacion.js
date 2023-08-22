@@ -1,5 +1,7 @@
 ﻿window.onload = function () {
     listarTipoHabitacion();
+
+   
 }
 
 function listarTipoHabitacion() {
@@ -8,12 +10,12 @@ function listarTipoHabitacion() {
         .then(res => res.json())
         .then(res => {
             var contenido = "";
-            contenido += "<table class='table'>"
+            contenido += "<table id='tblTipoHabitacion' class='display nowrap' style='width: 100%'><thead>"
                 contenido += "<tr>"
                     contenido += "<th>ID</th>"
                     contenido += "<th>NOMBRE</th>"
                     contenido += "<th>DESCRIPCION</th>"
-            contenido += "</tr>"
+            contenido += " </thead></tr> <tbody>"
             var fila;
             for (var i = 0; i < res.length; i++) {
                 fila = res[i];
@@ -23,10 +25,14 @@ function listarTipoHabitacion() {
                 contenido += "<td>"+fila.descripcion+"</td>"
                 contenido += "</tr>"
             }
-            contenido += "</table>"
+            contenido += "</tbody></table>"
 
+      
             document.getElementById("divTabla").innerHTML = contenido;
 
             //alert(res)
+            new DataTable('#tblTipoHabitacion');
         })
+
+
 }

@@ -101,6 +101,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\datatable\jquery.dataTables.min.css" />
+    <Content Include="Content\datatable\responsive.dataTables.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\sweetalert2\sweetalert2.all.min.js" />
     <Content Include="Content\sweetalert2\sweetalert2.min.css" />
@@ -121,6 +123,8 @@
     <Content Include="Content\bootstrap\variables.less" />
     <Content Include="Content\bootstrap\mixins.less" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
+    <Content Include="Scripts\datable\dataTables.responsive.min.js" />
+    <Content Include="Scripts\datable\jquery.dataTables.min.js" />
     <Content Include="Scripts\Generico.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
