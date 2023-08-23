@@ -11,12 +11,10 @@ namespace miPrimeraAplicacionMVCConCapas.Controllers
 {
     public class TipoHabitacionController : Controller
     {
-        // GET: TipoHabitacion
         public ActionResult Index()
         {
             return View();
         }
-        //[{"id":1,"nombre":"Simple","descripcion":"Solo para uno"},{"id":2,"nombre":"Doble","descripcion":"Solo para casados"}]
         public JsonResult ListaQueda() {
             TipoHabitacionBL obj = new TipoHabitacionBL();
 

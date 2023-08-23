@@ -17,7 +17,6 @@ namespace Capa_Datos
                 id = 1,
                 nombre = "Simple",
                 descripcion = "Solo para uno"
-
             });
             listaQuemada.Add(new TipoHabitacionCLS
             {
@@ -32,6 +31,13 @@ namespace Capa_Datos
                 id = 3,
                 nombre = "Triple",
                 descripcion = "dos adulto y un ninio"
+
+            });
+            listaQuemada.Add(new TipoHabitacionCLS
+            {
+                id = 4,
+                nombre = "cuadruple",
+                descripcion = "dos adulto y dos ninio"
 
             });
             return listaQuemada;

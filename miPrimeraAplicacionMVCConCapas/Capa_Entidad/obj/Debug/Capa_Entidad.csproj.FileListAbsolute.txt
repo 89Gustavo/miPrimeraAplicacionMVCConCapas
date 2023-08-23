@@ -3,3 +3,4 @@ C:\proyectoCsharp\miPrimeraAplicacionMVCConCapas\miPrimeraAplicacionMVCConCapas\
 C:\proyectoCsharp\miPrimeraAplicacionMVCConCapas\miPrimeraAplicacionMVCConCapas\Capa_Entidad\obj\Debug\Capa_Entidad.csproj.CoreCompileInputs.cache
 C:\proyectoCsharp\miPrimeraAplicacionMVCConCapas\miPrimeraAplicacionMVCConCapas\Capa_Entidad\obj\Debug\Capa_Entidad.dll
 C:\proyectoCsharp\miPrimeraAplicacionMVCConCapas\miPrimeraAplicacionMVCConCapas\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
+C:\proyectoCSharp\miPrimeraAplicacionMVCConCapas\miPrimeraAplicacionMVCConCapas\Capa_Entidad\obj\Debug\Capa_Entidad.csproj.AssemblyReference.cache
