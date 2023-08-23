@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Capa_Entidad;
+
+using System.Data;
+using System.Data.SqlClient;
+
 namespace Capa_Datos
 {
     public class TipoHabitacionDAL
@@ -41,6 +45,45 @@ namespace Capa_Datos
 
             });
             return listaQuemada;
+        }
+        public List<TipoHabitacionCLS> ListarTiposHabitacion()
+        {
+            List<TipoHabitacionCLS> lista = new List<TipoHabitacionCLS>();
+
+            using (SqlConnection cn = new SqlConnection("Data Source=LP-OP-03;Initial Catalog=BDHotel;Persist Security Info=True;User ID=sa;Password=Fantasmita@0608"))
+            {
+                
+
+                try {
+                    cn.Open();
+                    using (SqlCommand cmd = new SqlCommand("uspListarTipoHabitacion",cn)) {
+
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        SqlDataReader drd = cmd.ExecuteReader();
+                        if (drd != null) {
+                            lista = new List<TipoHabitacionCLS>();
+                            TipoHabitacionCLS oTipoHabitacionCLS;
+                            while (drd.Read())
+                            {
+                                oTipoHabitacionCLS = new TipoHabitacionCLS();
+                                oTipoHabitacionCLS.id = drd.GetInt32(0);
+                                oTipoHabitacionCLS.nombre = drd.GetString(1);
+                                oTipoHabitacionCLS.descripcion = drd.GetString(2);
+                                lista.Add(oTipoHabitacionCLS);
+                            }
+                            
+                        }
+                       
+                    }
+                    cn.Close();
+
+                }
+                catch (Exception e) {
+                    cn.Close();
+                }
+            }
+
+            return lista;
         }
     }
 }

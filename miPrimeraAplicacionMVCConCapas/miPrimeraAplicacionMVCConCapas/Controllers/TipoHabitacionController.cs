@@ -19,7 +19,7 @@ namespace miPrimeraAplicacionMVCConCapas.Controllers
             TipoHabitacionBL obj = new TipoHabitacionBL();
 
 
-            return Json(obj.ListarDatosQuemados(), JsonRequestBehavior.AllowGet);
+            return Json(obj.ListarTiposHabitacion(), JsonRequestBehavior.AllowGet);
         
         }
     }
