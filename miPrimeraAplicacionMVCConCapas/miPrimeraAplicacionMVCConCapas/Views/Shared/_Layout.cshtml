@@ -3,10 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Mi Primera Aplicacion MVC Con Capas</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+
+    <link href="~/Content/datatable/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="~/Content/datatable/responsive.dataTables.min.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -28,7 +32,7 @@
                                 </svg>
                                 Usuario
                             </a>
-                            <div class="offcanvas offcanvas-top ms-0 mt-1 text-bg-dark   h-50 " tabindex="-1" id="usuarioDarkNavbar" aria-labelledby="usuarioDarkNavbarLabel">
+                            <div class="offcanvas offcanvas-top ms-0 mt-1 text-bg-dark   h-25 " tabindex="-1" id="usuarioDarkNavbar" aria-labelledby="usuarioDarkNavbarLabel">
                                 <div class="offcanvas-header">
 
                                     <a class="offcanvas-title text-bg-dark nav-link">
@@ -36,14 +40,14 @@
                                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                                             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                                         </svg>
-                                        <label class="fs-3">Usuario</label>
+                                        <label class="fs-5">Usuario</label>
                                     </a>
                                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                 </div>
                                 <div class="offcanvas-body">
-                                    <ul class="navbar-nav justify-content-between bub flex-grow-1 pe-3">
+                                    <ul class="navbar-nav justify-content-between bub flex-grow-1 mt-1">
                                         <li class="nav-item">
-                                           salir
+                                            <a class="nav-link active text-white" aria-current="page" href="#">Salir</a>
                                         </li>
                                     </ul>
 
@@ -79,7 +83,7 @@
                                 @Html.ActionLink("TIPO HABITACION", "Index", "TipoHabitacion", new { area = "" }, new { @class = "nav-link" })
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                                @Html.ActionLink("CAMA", "Index", "Cama", new { area = "" }, new { @class = "nav-link" })
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -105,36 +109,39 @@
 
 
 
-    <!----div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
-            </div>
-        </div>
-    </div-->
-
 
     <div class="container-fluid">
-        <div class="card mt-3 rounded">
+        <div class="card mt-3 rounded-3">
             <div class="card-body ">
                 @RenderBody()
             </div>
         </div>
+
     </div>
 
 
+
+
+
+
+
     <script src="~/Scripts/jquery-3.7.0.min.js"></script>
+
+
+    <script src="~/Scripts/datable/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/datable/dataTables.responsive.min.js"></script>
+
+
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
     <script src="~/Content/sweetalert2/sweetalert2.all.min.js"></script>
+
+
+
+
+
+
+
+
 </body>
 </html>

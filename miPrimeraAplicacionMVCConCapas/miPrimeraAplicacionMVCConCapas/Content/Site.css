@@ -11,3 +11,7 @@
 --bs-dark-rgb {
     background-color: #161616 !important;
 }
+
+.dataTables_length {
+display:none !important;
+}

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SweetAlert.Controllers
+namespace miPrimeraAplicacionMVCConCapas.Controllers
 {
-    public class SweetController : Controller
+    public class CamaController : Controller
     {
-        // GET: Sweet
-        public ActionResult Alert()
+        // GET: Cama
+        public ActionResult Index()
         {
             return View();
         }
