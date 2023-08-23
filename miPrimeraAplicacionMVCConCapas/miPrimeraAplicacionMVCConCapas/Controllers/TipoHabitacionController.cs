@@ -15,7 +15,7 @@ namespace miPrimeraAplicacionMVCConCapas.Controllers
         {
             return View();
         }
-        public JsonResult ListaQueda() {
+        public JsonResult ListadoHabitacion() {
             TipoHabitacionBL obj = new TipoHabitacionBL();
 
 

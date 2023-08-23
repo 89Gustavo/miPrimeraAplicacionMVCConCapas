@@ -29,17 +29,17 @@ namespace Capa_Datos
                         if (drd != null)
                         {
                             listaCama = new List<CamaCLS>();
-                            CamaCLS oTipoHabitacionCLS;
+                            CamaCLS oCamaCLS;
                             int posId = drd.GetOrdinal("IIDCAMA");
                             int posNombre = drd.GetOrdinal("NOMBRE");
                             int posDescripcion = drd.GetOrdinal("DESCRIPCION");
                             while (drd.Read())
                             {
-                                oTipoHabitacionCLS = new CamaCLS();
-                                oTipoHabitacionCLS.id = drd.GetInt32(posId);
-                                oTipoHabitacionCLS.nombre = drd.GetString(posNombre);
-                                oTipoHabitacionCLS.descripcion = drd.GetString(posDescripcion);
-                                listaCama.Add(oTipoHabitacionCLS);
+                                oCamaCLS = new CamaCLS();
+                                oCamaCLS.id = drd.IsDBNull(posId) ? 0 : drd.GetInt32(posId);
+                                oCamaCLS.nombre = drd.IsDBNull(posNombre) ? "" : drd.GetString(posNombre);
+                                oCamaCLS.descripcion = drd.IsDBNull(posDescripcion) ? "" : drd.GetString(posDescripcion);
+                                listaCama.Add(oCamaCLS);
                             }
                         }
                     }

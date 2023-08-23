@@ -1,7 +1,12 @@
 ﻿function pintar(objConfiguracion) {
 
+    var raiz = document.getElementById("hdfOculto").value;
+    var urlAbsoluta = window.location.protocol + "//"
+        + window.location.host + raiz + objConfiguracion.url;
 
-    fetch(objConfiguracion.url)
+    console.log(urlAbsoluta);
+
+    fetch(urlAbsoluta)
         .then(res => res.json())
         .then(res => {
             var contenido = "";

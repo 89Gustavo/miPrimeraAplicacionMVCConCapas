@@ -71,9 +71,9 @@ namespace Capa_Datos
                             while (drd.Read())
                             {
                                 oTipoHabitacionCLS = new TipoHabitacionCLS();
-                                oTipoHabitacionCLS.id = drd.GetInt32(posId);
-                                oTipoHabitacionCLS.nombre = drd.GetString(posNombre);
-                                oTipoHabitacionCLS.descripcion = drd.GetString(posDescripcion);
+                                oTipoHabitacionCLS.id = drd.IsDBNull(posId) ? 0 : drd.GetInt32(posId);
+                                oTipoHabitacionCLS.nombre = drd.IsDBNull(posNombre) ? "" : drd.GetString(posNombre);
+                                oTipoHabitacionCLS.descripcion = drd.IsDBNull(posDescripcion) ? "" : drd.GetString(posDescripcion);
                                 lista.Add(oTipoHabitacionCLS);
                             }
                             
