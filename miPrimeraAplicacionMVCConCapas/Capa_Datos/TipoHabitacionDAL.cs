@@ -8,10 +8,11 @@ using Capa_Entidad;
 
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Capa_Datos
 {
-    public class TipoHabitacionDAL
+    public class TipoHabitacionDAL:CandenaDAL
     {
         public List<TipoHabitacionCLS> ListarDatosQuemados() {
             List<TipoHabitacionCLS> listaQuemada = new List<TipoHabitacionCLS>();
@@ -50,7 +51,8 @@ namespace Capa_Datos
         {
             List<TipoHabitacionCLS> lista = new List<TipoHabitacionCLS>();
 
-            using (SqlConnection cn = new SqlConnection("Data Source=LP-OP-03;Initial Catalog=BDHotel;Persist Security Info=True;User ID=sa;Password=Fantasmita@0608"))
+            
+            using (SqlConnection cn = new SqlConnection(cadena))
             {
                 
 
