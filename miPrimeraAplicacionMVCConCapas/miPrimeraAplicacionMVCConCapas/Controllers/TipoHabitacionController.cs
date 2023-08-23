@@ -17,10 +17,12 @@ namespace miPrimeraAplicacionMVCConCapas.Controllers
         }
         public JsonResult ListadoHabitacion() {
             TipoHabitacionBL obj = new TipoHabitacionBL();
-
-
             return Json(obj.ListarTiposHabitacion(), JsonRequestBehavior.AllowGet);
-        
+        }
+        public JsonResult FiltrarTipoHabitacion(string nombreHabitacion)
+        {
+            TipoHabitacionBL obj = new TipoHabitacionBL();
+            return Json(obj.FiltrarTipoHabitacion(nombreHabitacion), JsonRequestBehavior.AllowGet);
         }
     }
 }

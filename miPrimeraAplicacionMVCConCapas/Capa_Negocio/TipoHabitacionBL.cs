@@ -20,5 +20,10 @@ namespace Capa_Negocio
             TipoHabitacionDAL oTipoHabitacionDAL = new TipoHabitacionDAL();
             return oTipoHabitacionDAL.ListarTiposHabitacion();
         }
+        public List<TipoHabitacionCLS> FiltrarTipoHabitacion(String nombreHabitacion) {
+            TipoHabitacionDAL oTipoHabitacionDAL = new TipoHabitacionDAL();
+            return oTipoHabitacionDAL.FiltrarTipoHabitacion(nombreHabitacion);
+
+        }
     }
 }

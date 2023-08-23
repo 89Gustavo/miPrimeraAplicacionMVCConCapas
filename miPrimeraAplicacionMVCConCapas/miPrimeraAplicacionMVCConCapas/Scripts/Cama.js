@@ -13,8 +13,4 @@ function listarTipoHabitacion() {
         cabeceras: ["ID", "NOMBRE", "DESCRIPCION"],
         propiedades: ["id", "nombre", "descripcion"]
     })
-
-
-
-
 }

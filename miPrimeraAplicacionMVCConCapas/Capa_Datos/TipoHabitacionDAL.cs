@@ -90,5 +90,54 @@ namespace Capa_Datos
 
             return lista;
         }
+
+        public List<TipoHabitacionCLS> FiltrarTipoHabitacion(String nombreHabitacion)
+        {
+            List<TipoHabitacionCLS> lista = new List<TipoHabitacionCLS>();
+
+
+            using (SqlConnection cn = new SqlConnection(cadena))
+            {
+
+
+                try
+                {
+                    cn.Open();
+                    using (SqlCommand cmd = new SqlCommand("uspFiltarTipoHabitacion", cn))
+                    {
+
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@nombrehabitacion",nombreHabitacion);
+                        SqlDataReader drd = cmd.ExecuteReader();
+                        if (drd != null)
+                        {
+                            lista = new List<TipoHabitacionCLS>();
+                            TipoHabitacionCLS oTipoHabitacionCLS;
+                            int posId = drd.GetOrdinal("IIDTIPOHABILITACION");
+                            int posNombre = drd.GetOrdinal("NOMBRE");
+                            int posDescripcion = drd.GetOrdinal("DESCRIPCION");
+                            while (drd.Read())
+                            {
+                                oTipoHabitacionCLS = new TipoHabitacionCLS();
+                                oTipoHabitacionCLS.id = drd.IsDBNull(posId) ? 0 : drd.GetInt32(posId);
+                                oTipoHabitacionCLS.nombre = drd.IsDBNull(posNombre) ? "" : drd.GetString(posNombre);
+                                oTipoHabitacionCLS.descripcion = drd.IsDBNull(posDescripcion) ? "" : drd.GetString(posDescripcion);
+                                lista.Add(oTipoHabitacionCLS);
+                            }
+
+                        }
+
+                    }
+                    cn.Close();
+
+                }
+                catch (Exception e)
+                {
+                    cn.Close();
+                }
+            }
+
+            return lista;
+        }
     }
 }
