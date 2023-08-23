@@ -46,6 +46,7 @@
     <Compile Include="CandenaDAL.cs" />
     <Compile Include="TipoHabitacionDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoUsuarioDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Entidad\Capa_Entidad.csproj">

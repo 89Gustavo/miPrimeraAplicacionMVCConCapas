@@ -4,13 +4,13 @@
     var urlAbsoluta = window.location.protocol + "//"
         + window.location.host + raiz + objConfiguracion.url;
 
-    console.log(urlAbsoluta);
+    //console.log(urlAbsoluta);
 
     fetch(urlAbsoluta)
         .then(res => res.json())
         .then(res => {
             var contenido = "";
-            contenido += "<table id='tblTipoHabitacion' class='display nowrap' style='width: 100%'><thead>"
+            contenido += `<table id='${objConfiguracion.idTabla}' class='display nowrap' style='width: 100%'><thead>`
             contenido += "<tr>"
             for (var j = 0; j < objConfiguracion.cabeceras.length; j++) {
                 contenido += "<th>" + objConfiguracion.cabeceras[j]+"</th>"
@@ -36,7 +36,7 @@
             document.getElementById(objConfiguracion.id).innerHTML = contenido;
 
             var id = "tblTipoHabitacion"
-            new DataTable("#" + id, {
+            new DataTable("#" + objConfiguracion.idTabla, {
                 responsive: true,
                 language: {
                     url: 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json',

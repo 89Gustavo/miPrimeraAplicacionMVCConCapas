@@ -132,6 +132,7 @@
     <Content Include="Scripts\jquery-3.7.0.slim.js" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
     <Content Include="Scripts\TipoHabitacion.js" />
+    <Content Include="Scripts\TipoUsuario.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Sweet\Alert.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -142,6 +143,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CamaController.cs" />
     <Compile Include="Controllers\TipoHabitacionController.cs" />
+    <Compile Include="Controllers\TipoUsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -175,6 +177,7 @@
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.0.min.map" />
     <Content Include="Views\Cama\Index.cshtml" />
+    <Content Include="Views\TipoUsuario\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

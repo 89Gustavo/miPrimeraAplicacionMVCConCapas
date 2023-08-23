@@ -7,9 +7,9 @@
 function listarTipoHabitacion() {
 
     pintar({
-        url: "Cama/ListarCama",
+        url: "TipoUsuario/ListaTipoUsuario",
         id: "divTabla",
-        idTabla: "tblCama",
+        idTabla: "tblTipoUsuario",
         cabeceras: ["ID", "NOMBRE", "DESCRIPCION"],
         propiedades: ["id", "nombre", "descripcion"]
     })
